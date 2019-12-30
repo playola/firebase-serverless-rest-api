@@ -11,10 +11,7 @@ const app = express();
 app.use(cors({ origin: true }));
 
 const helloWorld = ((request, response) => {
-  return response.send({
-    status: 200,
-    message: "Hello World!",
-  });
+  return response.send("Hello World!");
 });
 
 const users = ((request, response) => {
@@ -30,10 +27,7 @@ const users = ((request, response) => {
       surname: "Bar",
     },
   ];
-  return response.send({
-    status: 200,
-    message: usersList,
-  });
+  return response.send(usersList);
 });
 
 // CRUD interfaces:
@@ -41,4 +35,4 @@ app.get('/', helloWorld);
 app.get('/users', users);
 
 // Expose Express API as a single Cloud Function:
-module.exports = functions.https.onRequest(app);
+exports.v1 = functions.https.onRequest(app);

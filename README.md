@@ -1,5 +1,5 @@
 # firebase-serverless-rest-api
-> Testing out Firebase Cloud Functions with Express.
+> Trying out Firebase Cloud Functions with Express.
 
 This project was bootstrapped using Firebase CLI: `firabase init functions`.
 
@@ -8,10 +8,15 @@ This project was bootstrapped using Firebase CLI: `firabase init functions`.
 ```
   git clone 
 
-  cd firebase-serverless-rest-api
+  cd firebase-serverless-rest-api/functions
 
   npm install
 ```
+
+You can see the endpoints working at:
+
+`https://{your-region}-{your-project-name}.cloudfunctions.net/v1`
+`https://{your-region}-{your-project-name}.cloudfunctions.net/v1/users`
 
 ## References
 
